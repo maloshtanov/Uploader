@@ -1,0 +1,37 @@
+{
+    "name": "maloshtanov/uploader",
+    "description": "Simple model attachment uploader",
+    "keywords": ["upload", "laravel"],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "webpatser/laravel-uuid": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Alexey Maloshtanov",
+            "email": "e.xpert@mail.ru"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Maloshtanov\\Uploader\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Maloshtanov\\Uploader\\UploaderServiceProvider"
+            ],
+            "aliases": {
+                "Uploader": "Maloshtanov\\Uploader\\Facades\\Uploader"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
